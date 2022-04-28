@@ -32,6 +32,7 @@
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/venobox/venobox.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Main Stylesheet File -->
   <link href="./css/style.css" rel="stylesheet">
@@ -45,12 +46,39 @@
   <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
 
 </head>
 
 <body>
 
+  <div id="boxes">
+    <div style="display: none;" id="dialog" class="window"> 
+      <div id="san" style="width: 100%; height: 100%;">
+        <a href="#" class="close agree"><i class="fa-solid fa-xmark" width="25" style="color: white;float:right; margin-right: -25px; margin-top: -20px;"></i></a>
+        <a href="#buy-tickets" class="close-image">
+          <img src="./img/Artists/sunburn-promo.png" alt="" style='height: 100%; width: 100%; object-fit: contain; border-radius: 20px;'>
+        </a>
+        <!-- <img src="./img/Artists/Artists-01.png" alt="" style='height: 100%; width: 100%; object-fit: contain; border-radius: 5px;'> -->
+        <!-- <div style='height: 100%; width: 100%; object-fit: contain; background: #878787; border-radius: 5px;'> -->
+          <!-- <img src="./img/sunburn.webp" style='height: 100%; width: 100%; object-fit: cover; border-radius: 5px; opacity: 30%;'> -->
+          <!-- <img src="./img/Artists/Artists-02.png" style="height: 50%; width: 50%;" alt=""> -->
+          <!-- <h4 style="position: absolute; top: 10px; left: 15px;">Grab your Tickets</h4> -->
+        <!-- </div> -->
+      </div>
+    </div>
+    <div style="width: 2478px; font-size: 32pt; color:white; height: 1202px; display: none; opacity: 0.4;" id="mask"></div>
+  </div>
+    
+
+  <!-- POPUP -->
+  <!-- <div class="box-popup-background">
+    <div class="box-popup">
+      <h1>Grab your tickets</h1>
+    </div>
+  </div> -->
+
+  
   <!--==========================
     Header
   ============================-->
@@ -1585,6 +1613,37 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
   <!-- JavaScript Libraries -->
+<script>
+
+  $(document).ready(function() { 
+    var id = '#dialog';
+    var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+    $('#mask').css({'width':maskWidth,'height':maskHeight}); 
+    $('#mask').fadeIn(500); 
+    $('#mask').fadeTo("slow",0.9); 
+          var winH = $(window).height();
+    var winW = $(window).width();
+      $(id).fadeIn(2000);  
+      $('.window .close').click(function (e) {
+    e.preventDefault();
+    $('#mask').hide();
+    $('.window').hide();
+       });  
+      $('.close-image').click(function (e) {
+    e.preventDefault();
+    window.location.replace("http://127.0.0.1:5500/index.html#buy-tickets");
+    $('#mask').hide();
+    $('.window').hide();
+       });  
+       $('#mask').click(function () {
+    $(this).hide();
+    $('.window').hide();
+   });  
+   
+  });
+</script>
+
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
