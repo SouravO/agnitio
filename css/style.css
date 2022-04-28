@@ -1768,7 +1768,7 @@ h4{
   text-align: center;
 }
 #boxes #dialog {
-  position: absolute !important;
+  position: fixed !important;
   right: 40px;
   bottom: 20px;
   width: 310px;
