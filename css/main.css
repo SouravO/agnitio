@@ -88,7 +88,7 @@
   display: -ms-flexbox;
   display: flex;
   flex-wrap:wrap;
-  position:relative;
+  position:absolute;
   max-width: 100%;
   margin:0px;
   margin-bottom: 10px;
@@ -216,7 +216,7 @@
   content: "sec";
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 100%) {
   .flip-clock-wrapper {
     justify-content: center;
   }
