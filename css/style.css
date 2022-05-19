@@ -516,7 +516,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: absolute;
   bottom: 0;
   left: 0;
-  top: 90px;
+  top: 0px;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -533,6 +533,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   flex-direction: column;
   text-align: center;
   padding: 0 15px;
+}
+
+.ForumCenterLogo{
+  width: 320px;
 }
 
 #intro h1 {
@@ -1669,7 +1673,11 @@ h4{
   }
 
   #intro .intro-container {
-    top: 70px;
+    top: 0px;
+  }
+
+  .ForumCenterLogo{
+    width: 250px;
   }
 
   #intro h1 {
