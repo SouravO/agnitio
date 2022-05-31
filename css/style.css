@@ -1963,3 +1963,26 @@ h4{
   border-left: 2px solid #3a3a3d;
   height: 70px;
 }
+
+
+ /* Gallery Carousel*/
+
+ .swiper-container {
+  overflow: hidden;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 450px;
+  height: 450px;
+  background: #000;
+  -webkit-box-reflect: below 1px linear-gradient(transparent,transparent, #0000);
+
+}
+.img-gallery{
+  width: 450px;
+  height: 450px;
+}
